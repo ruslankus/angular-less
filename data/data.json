@@ -1,0 +1,137 @@
+[
+			{	
+				"id": 1,
+				"title": "First Item",
+				"price": "20000",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Vihicles",
+					"Parts and Accessories"
+				],
+				
+				"image": "/img/nissanleafstill1.jpg"	
+				
+			},
+			
+			{	
+				"id": 2,
+				"title": "Second Item",
+				"price": "22000",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Vihicles",
+					"Parts and Accessories"
+				],
+				
+				"image": "/img/1-honda-civic.jpg"	
+				
+			},
+			
+			{	
+				"id": 3,
+				"title": "Third Item",
+				"price": "30000",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Vihicles",
+					"Parts and Accessories"
+				],
+				
+				"image": "/img/Peugeot-308.jpg"	
+				
+			},
+			
+			{	
+				"id": 4,
+				"title": "Fourth Item",
+				"price": "500",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Mobile phones"					
+				],
+				
+				"image": "/img/nokia.jpg"	
+				
+			},
+			
+			{	
+				"id": 5,
+				"title": "Fifth Item",
+				"price": "200",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Clothers"					
+				],
+				
+				"image": "/img/jacket-1.jpg"	
+				
+			},
+			
+			{	
+				"id": 6,
+				"title": "Six Item",
+				"price": "1300",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Computers"					
+				],
+				
+				"image": "/img/macbook_air.jpg"	
+				
+			},
+			
+			{	
+				"id": 7,
+				"title": "Seventh Item",
+				"price": "600",
+				"posted": "2016-02-24",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, tempora, eos qui optio ipsum voluptas laboriosam aut in earum voluptatibus magnam veritatis quos ab! Libero, doloribus consequuntur facere unde non?",
+				"contact" : {
+					"name": "Vasia",
+					"phone": "(555) 555-5555",
+					"email": "vasia@test.dm"
+				},
+				"categories": [
+					"Clothers"					
+				],
+				
+				"image": "/img/bagir_jacket_1.jpg"	
+				
+			}			
+]	

@@ -1,0 +1,6 @@
+.md-toolbar-tools > button.md-button {}
+
+.md-toolbar-tools > button.md-button > .mdi {
+	line-height:20px; }
+	
+	

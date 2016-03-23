@@ -3,14 +3,16 @@
 
     angular
       .module("ngClassifieds")
-      .controller("ngclassCtrl", function($scope){
-
-          $scope.name = {
-            fname: 'Ruslan',
-            lname: 'Kiricenko'
-          }
-
-          $scope.message = "Hello World!!!";
+      .controller("ngclassCtrl", function($scope, $http){
+		
+        $http.get('/data/data.json').then(function(returnData){
+            //console.log(data);
+            $scope.classifieds = returnData.data; 
+            
+        });
+        
+		
+			          
       });
 
 })();
