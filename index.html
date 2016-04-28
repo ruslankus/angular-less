@@ -17,8 +17,38 @@
             	<md-icon class="mdi mdi-plus-circle"></md-icon>
                 New Classified
             </md-button>
+            
+             <md-button ng-click="showFilters = true">
+            	<md-icon class="mdi mdi-magnify"></md-icon>
+                Filters
+            </md-button>
+            
+            
     	</div>
     </md-toolbar>
+    
+    <div class="filters" layout="row" layout-align="center center" ng-show="showFilters">
+        <md-input-container>
+            <label>Enter Search Term</label>
+            <input type="text" ng-model="classifiedsFilters" >
+        </md-input-container>
+        
+        <md-input-container layout="row">
+            <label>Category</label>
+           <md-select ng-model="category">
+               <md-option ng-repeat="category in categories" value="{{ category }}" >
+                   {{ category }}
+               </md-option>
+           </md-select>
+        </md-input-container>
+        
+        <div layout="row">
+            <md-button class="md-warn"  ng-click="classifiedsFilters = ''; category = ''; " >
+                Clear
+            </md-button>
+        </div>
+                
+    </div>
     
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
         <md-toolbar>
@@ -30,29 +60,29 @@
             <form>
                 <md-input-container>
                     <label for="title">Title</label>
-                    <input type="text" id="title" md-autofocus>
+                    <input type="text" id="title" ng-model="classified.title" md-autofocus>
                 </md-input-container>
                 
                 <md-input-container>
                     <label for="price">Price</label>
-                    <input type="text" id="price">
+                    <input type="text" id="price" ng-model="classified.price">
                 </md-input-container>
                 
                 <md-input-container>
                     <label for="description">Description</label>
-                    <input type="text" id="description">
+                    <input type="text" id="description" ng-model="classified.description">
                 </md-input-container>
                 
                 <md-input-container>
                     <label for="image">Image</label>
-                    <input type="text" id="image">
+                    <input type="text" id="image" ng-model="classified.image">
                 </md-input-container>
                 
-                <md-button class="md-primary">
+                <md-button class="md-primary" ng-if="!edit" ng-click="saveClassified(classified)">
                     Save
                 </md-button>
                 
-                <md-button class="md-primary">
+                <md-button class="md-primary" ng-if="edit" ng-click="saveEdit()" >
                     Save Edit
                 </md-button>
                 
@@ -61,11 +91,14 @@
                 </md-button>
                 
             </form>
+            
+            <pre>{{ classified | json }}</pre>
         </md-content>
     </md-sidenav>
         
     <md-content class="md-padding" layout="row" layout-wrap >
-    	<md-card ng-repeat="classified in classifieds" flex="30">
+    	<md-card ng-repeat="classified in classifieds | 
+                filter:classifiedsFilters | filter:category" flex="30" class="classified">
         	<img ng-src="{{ classified.image }}" alt="" />
             <md-card-content>
                 <div class="classified-info" ng-show="!showContact">
@@ -91,8 +124,8 @@
                 <div class="classified-admin" ng-if="showAdmin">
                 	<h3>Admin</h3>
                     <div layout="row">
-                    	<md-button class="md-primary">Edit</md-button>
-                    	<md-button class="md-primary">Delete</md-button>
+                    	<md-button class="md-primary" ng-click="editClassified(classified)">Edit</md-button>
+                    	<md-button class="md-primary" ng-click="deleteClassified($event, classified)">Delete</md-button>
                     </div>
                 </div>
                
@@ -109,5 +142,6 @@
 <script src="scripts/app.js" ></script>
 <script src="components/ngclass.ctr.js"></script>
 <script src="components/ngclass.fac.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.js" ></script>
 
 </html>
